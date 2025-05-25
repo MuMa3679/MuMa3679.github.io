@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +16,63 @@
     <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="img/profile.jpg" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 120px;
+            margin-bottom: 30px;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 90px;
+            top: 0;
+            bottom: -30px;
+            width: 2px;
+            background: #3498db;
+        }
+        .timeline-item:last-child:before {
+            bottom: -100px;
+            background: linear-gradient(to bottom, #3498db 0%, #3498db 80%, transparent 100%);
+        }
+        .timeline-date {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 80px;
+            padding: 5px 10px;
+            background: #3498db;
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .timeline-content h5 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .timeline-content p {
+            color: #34495e;
+            margin: 0;
+        }
+        .badge {
+            font-size: 0.8em;
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+    </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1NSP0YT8J"></script>
@@ -49,7 +105,7 @@
   </script>
 </head>
 
-<body>
+<body style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);">
     <div class="wrapper">
 
     <!-- header -->
@@ -82,62 +138,123 @@
             <!-- /mv -->
 
             <!-- about -->
-            <section class="about section" id="about">
+            <section class="about section" id="about" style="background: rgba(255, 255, 255, 0.9); padding: 60px 0; margin: 40px 0; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="container">
                     <h2 class="title">概要</h2>
-                    <div class="profile">
-                        <p class="profile-img">
-                            <img src="./img/profile.jpg" alt="aaa">
-                        </p>
-                        <div class="profile-body">
-                            <p>
-                                <div class="feature col">
-                                    <h4>ハンドルネーム</h4>
-                                        <p>
-                                            むうま
-                                        </p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                                            <img src="./img/profile.jpg" alt="プロフィール画像" class="img-fluid rounded-circle" style="max-width: 200px;">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="mb-4">
+                                                <h4 class="card-title">ハンドルネーム</h4>
+                                                <p class="card-text">むうま</p>
+                                            </div>
+                                            <div class="mb-4">
+                                                <h4 class="card-title">出身</h4>
+                                                <p class="card-text">神奈川県</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </p>
-                            <p>
-                                <div class="feature col">
-                                    <h3>出身</h3>
-                                        <p>
-                                            神奈川県
-                                        </p>
-                                </div>
-                            </p>
-                            <p>
-                                <div class="feature col">
-                                    <h3>自己紹介</h3>
-                                        <p>
-                                            はじめまして。<br>
-                                            2018年に新卒でWEB系の会社に入社し、 WEBエンジニアとしてフロントエンド、バックエンドの開発をしています。<br>
-                                            主にAWSを用いた開発を行っております。<br>
-                                            社外のエンジニアとの交流がほとんど無いので、モチベーション向上と技術向上のためにSNS等で活動していきたいと思っています。
-                                            Twitterなどでお互いに技術共有出来たらと思っています。<br>
-                                            よろしくお願します。<br>
-                                        </p>
-                                </div>
-                            </p>
-                            <p>
-                                <div class="feature col">
-                                    <h3>私の沿革</h3>
-                                        <p>
-                                            2018年3月～ 大学情報系学科卒業<br>
-                                            2018年4月～ 新卒でWEB系会社に入社<br>
-                                            2018年10月～ グループウェアサービスの改修開発及び修正を担当<br>
-                                            2020年1月～ 新サービスを0から作成<br>
-                                            2022年8月～ クラウド系SIerに入社<br>
-                                        </p>
-                                </div>
-                            </p>
-                            <div class="feature col">
-                                <h3>リンク</h3>
-                                    <p>
-                                        <a href= "https://twitter.com/MuMa3679" >Twitter</a><br>
-                                        <a href= "https://github.com/MuMa3679" >GitHub</a><br>
-                                        <a href= "https://qiita.com/MuMa3679" >Qiita</a><br>
+                            </div>
+
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title" style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">自己紹介</h4>
+                                    <p class="card-text" style="color: #34495e;">
+                                        はじめまして。むうまと申します。<br><br>
+                                        
+                                        2018年に新卒でWEB系企業に入社し、エンジニアとしてのキャリアをスタートしました。
+                                        主にバックエンド開発を担当し、AWSを活用したシステム開発の経験を積みました。<br><br>
+                                        
+                                        2022年にはクラウドを専門とするSIerに転職し、現在はSalesforceを中心とした開発に従事しています。
+                                        Salesforce以外にも、HerokuやOktaCIC、AWSなど、様々なクラウドサービスを活用した開発経験があります。
+                                        マルチクラウド環境でのシステム設計や、クラウドサービス間の連携実装など、幅広い技術領域に取り組んでいます。<br><br>
+                                        
+                                        また、本業の傍ら副業としてもエンジニア活動を行っており、新規WEBサービス立ち上げを支援しています。
+                                        AWSを活用したインフラ設計・構築を担当し、スケーラブルでセキュアなシステム基盤の構築に貢献しています。<br><br>
+                                        
+                                        社外のエンジニアの方々との交流を通じて、さらなる技術力の向上とモチベーションの維持を図りたいと考えています。<br>
+                                        よろしくお願いいたします。
                                     </p>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title">私の沿革</h4>
+                                    <div class="timeline">
+                                        <div class="timeline-item">
+                                            <div class="timeline-date">2018年3月</div>
+                                            <div class="timeline-content">
+                                                <h5>大学情報系学科 卒業</h5>
+                                                <p>情報工学を専攻し、Web技術とデータベース設計の基礎を学ぶ</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-date">2018年4月</div>
+                                            <div class="timeline-content">
+                                                <h5>WEB系企業 入社</h5>
+                                                <p>新卒エンジニアとして、フロントエンド・バックエンド開発の基礎を習得</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-date">2018年10月</div>
+                                            <div class="timeline-content">
+                                                <h5>グループウェアサービス開発</h5>
+                                                <p>既存サービスの改修開発を担当。Pythonを使用した機能追加等を実施</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-date">2020年1月</div>
+                                            <div class="timeline-content">
+                                                <h5>新規サービス開発プロジェクト</h5>
+                                                <p>0から1のサービス開発に従事。AWSを活用したCTIシステムの構築を実施</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-date">2022年8月</div>
+                                            <div class="timeline-content">
+                                                <h5>クラウド系SIer 入社</h5>
+                                                <p>マルチクラウドを専門とするSIerに入社。Salesforceを中心とした開発を行っています。</p>
+                                            </div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-date">2022年9月</div>
+                                            <div class="timeline-content">
+                                                <h5>副業エンジニア活動 開始</h5>
+                                                <p>本業の傍ら、副業としてエンジニア活動を開始。AWSを中心としたアプリケーションのインフラを設計、構築を担当。</p>
+                                                <div class="mt-2">
+                                                    <span class="badge bg-info">副業</span>
+                                                    <span class="badge bg-secondary">AWS</span>
+                                                    <span class="badge bg-secondary">Salesforce</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-body">
+                                    <h4 class="card-title">リンク</h4>
+                                    <div class="d-flex gap-3">
+                                        <a href="https://twitter.com/MuMa3679" class="btn btn-outline-primary">
+                                            <i class="bi bi-twitter"></i> Twitter
+                                        </a>
+                                        <a href="https://github.com/MuMa3679" class="btn btn-outline-dark">
+                                            <i class="bi bi-github"></i> GitHub
+                                        </a>
+                                        <a href="https://qiita.com/MuMa3679" class="btn btn-outline-success">
+                                            <i class="bi bi-journal-text"></i> Qiita
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -145,8 +262,8 @@
             </section>
             <!-- /about -->
 
-            <section class="stack section" id="stack">
-            <h2 class="title">技術スタック</h2>
+            <section class="stack section" id="stack" style="background: rgba(255, 255, 255, 0.9); padding: 60px 0; margin: 40px 0; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                <h2 class="title">技術スタック</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-xs-12">
 
@@ -459,7 +576,7 @@
                 </div>
             </section>
 
-            <section class="license section" id="license">
+            <section class="license section" id="license" style="background: rgba(255, 255, 255, 0.9); padding: 60px 0; margin: 40px 0; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <h2 class="title">保有資格</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-xs-12">
@@ -514,6 +631,10 @@
                                         Salesforce 認定アドミニストレーター
                                         <span class="badge bg-primary rounded-pill">2025年取得</span>
                                     </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Salesforce 認定 AgentForce スペシャリスト
+                                        <span class="badge bg-primary rounded-pill">2025年取得</span>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -523,15 +644,25 @@
             </section>
 
             <!-- contact -->
-            <section class="contact section" id="contact">
+            <section class="contact section" id="contact" style="background: rgba(255, 255, 255, 0.9); padding: 60px 0; margin: 40px 0; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <div class="container">
                     <h2 class="title">問い合わせ</h2>
-                    <p class="lead">
-                        お問い合わせは、メールまたはTwitterでお願いいたします。
-                    </p>
-                    <div class="contact-list">
-                        <a href="mailto:muma@ymail.ne.jp">muma@ymail.ne.jp</a>
-                        <a class="contact-item" href="https://twitter.com/MuMa3679" target="_blank" rel="noopener">@MuMa3679</a>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="card shadow-sm">
+                                <div class="card-body text-center">
+                                    <h4 class="card-title mb-4">お問い合わせは、メールまたはTwitterでお願いいたします</h4>
+                                    <div class="d-flex justify-content-center gap-4">
+                                        <a href="mailto:muma@ymail.ne.jp" class="btn btn-outline-primary btn-lg">
+                                            <i class="bi bi-envelope-fill"></i> メール
+                                        </a>
+                                        <a href="https://twitter.com/MuMa3679" class="btn btn-outline-info btn-lg" target="_blank" rel="noopener">
+                                            <i class="bi bi-twitter"></i> Twitter
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

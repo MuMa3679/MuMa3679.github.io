@@ -105,7 +105,7 @@
   </script>
 </head>
 
-<body style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);">
+<body>
     <div class="wrapper">
 
     <!-- header -->
@@ -138,7 +138,7 @@
             <!-- /mv -->
 
             <!-- about -->
-            <section class="about section" id="about" style="background: rgba(255, 255, 255, 0.9); padding: 60px 0; margin: 40px 0; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <section class="about section section-surface" id="about">
                 <div class="container">
                     <h2 class="title">概要</h2>
                     <div class="row justify-content-center">
@@ -165,12 +165,13 @@
 
                             <div class="card mb-4 shadow-sm">
                                 <div class="card-body">
-                                    <h4 class="card-title" style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">自己紹介</h4>
-                                    <p class="card-text" style="color: #34495e;">
+                                    <h4 class="card-title" style="color: var(--color-text); border-bottom: 2px solid var(--color-accent); padding-bottom: 10px;">自己紹介</h4>
+                                    <p class="card-text" style="color: var(--color-text-muted);">
                                         はじめまして。むうまと申します。<br><br>
                                         
                                         2018年に新卒でWEB系企業に入社し、エンジニアとしてのキャリアをスタートしました。
-                                        主にバックエンド開発を担当し、AWSを活用したシステム開発の経験を積みました。<br><br>
+                                        主にバックエンド開発を担当し、AWSを活用したシステム開発の経験を積みました。
+                                        2026年にはAWS認定ソリューションアーキテクト - プロフェッショナルを取得し、より高度なクラウド設計スキルを身につけました。<br><br>
                                         
                                         2022年にはクラウドを専門とするSIerに転職し、現在はSalesforceを中心とした開発に従事しています。
                                         Salesforce以外にも、HerokuやOktaCIC、AWSなど、様々なクラウドサービスを活用した開発経験があります。
@@ -257,16 +258,17 @@
             </section>
             <!-- /about -->
 
-            <section class="stack section" id="stack" style="background: rgba(255, 255, 255, 0.9); padding: 60px 0; margin: 40px 0; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <section class="stack section section-surface" id="stack">
                 <h2 class="title">技術スタック</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-xs-12">
 
                         <!-- フロントエンド -->
                         <div class="card mb-4 rounded-3 shadow-sm">
-                            <div class="card-header py-3">
-                                <h4 class="my-0 fw-normal">フロントエンド</h4>
-                            </div>
+                            <details>
+                            <summary class="card-header py-3">
+                                <h4 class="my-0 fw-normal d-inline">フロントエンド</h4>
+                            </summary>
                             <div class="card-body">
                                 <ul class="list-group">
 
@@ -304,13 +306,15 @@
 
                                 </ul>
                             </div>
+                            </details>
                         </div>
 
                         <!-- バックエンド -->
                         <div class="card mb-4 rounded-3 shadow-sm">
-                            <div class="card-header py-3">
-                                <h4 class="my-0 fw-normal">バックエンド</h4>
-                            </div>
+                            <details>
+                            <summary class="card-header py-3">
+                                <h4 class="my-0 fw-normal d-inline">バックエンド</h4>
+                            </summary>
                             <div class="card-body">
                                 <ul class="list-group">
 
@@ -356,16 +360,18 @@
 
                                 </ul>
                             </div>
+                            </details>
                         </div>
 
-                        <!-- IaaS / SaaS / インフラ -->
+                        <!-- インフラ -->
                         <div class="card mb-4 rounded-3 shadow-sm">
-                            <div class="card-header py-3">
-                                <h4 class="my-0 fw-normal">IaaS / SaaS / インフラ</h4>
-                            </div>
+                            <details>
+                            <summary class="card-header py-3">
+                                <h4 class="my-0 fw-normal d-inline">インフラ</h4>
+                            </summary>
                             <div class="card-body">
                                 <ul class="list-group">
-                                    
+
                                     <li class="list-group-item d-flex justify-content-between">
                                         Docker
                                         <span class="d-inline-flex align-items-center gap-2">
@@ -399,143 +405,156 @@
                                     </li>
 
                                 </ul>
-
-                                <!-- AWS -->
-                                <div class="mt-4">
-                                    <h5 class="fw-bold">AWS</h5>
-                                    <ul class="list-group">
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            EC2 / ALB / VPC / NatGateway
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★★☆☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            RDS
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★★★☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            S3
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★★★☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            ECS / Farget
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★★★☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            Elasticache / Redis
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★★★☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            Glue / Athena
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★☆☆☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            WAF / CloudFront / Route53
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★★☆☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            API Gateway
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★★☆☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
-                                <!-- Salesforce -->
-                                <div class="mt-4">
-                                    <h5 class="fw-bold">Salesforce</h5>
-                                    <ul class="list-group">
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            Force.com
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★★☆☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            DataCloud
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★☆☆☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            ServiceCloud / SalesCloud
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★☆☆☆☆</span>
-                                                <span class="badge bg-secondary">実務経験なし</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            AgentForce
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★★☆☆☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            B2C Commerce
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★☆☆☆☆</span>
-                                                <span class="badge bg-success">実務経験あり</span>
-                                            </span>
-                                        </li>
-
-                                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                                            MuleSoft
-                                            <span class="d-inline-flex align-items-center gap-2">
-                                                <span class="text-warning">★☆☆☆☆</span>
-                                                <span class="badge bg-secondary">実務経験なし</span>
-                                            </span>
-                                        </li>
-
-                                    </ul>
-                                </div>
-
                             </div>
+                            </details>
                         </div>
-                        
+
+                        <!-- AWS -->
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <details>
+                            <summary class="card-header py-3">
+                                <h4 class="my-0 fw-normal d-inline">AWS</h4>
+                            </summary>
+                            <div class="card-body">
+                                <ul class="list-group">
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        EC2 / ALB / VPC / NatGateway
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★★☆☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        RDS
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★★★☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        S3
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★★★☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        ECS / Fargate
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★★★☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Elasticache / Redis
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★★★☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Glue / Athena
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★☆☆☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        WAF / CloudFront / Route53
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★★☆☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        API Gateway
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★★☆☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            </details>
+                        </div>
+
+                        <!-- Salesforce -->
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <details>
+                            <summary class="card-header py-3">
+                                <h4 class="my-0 fw-normal d-inline">Salesforce</h4>
+                            </summary>
+                            <div class="card-body">
+                                <ul class="list-group">
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Force.com
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★★☆☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        DataCloud
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★☆☆☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        ServiceCloud / SalesCloud
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★☆☆☆☆</span>
+                                            <span class="badge bg-secondary">実務経験なし</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        AgentForce
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★☆☆☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        B2C Commerce
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★☆☆☆☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        MuleSoft
+                                        <span class="d-inline-flex align-items-center gap-2">
+                                            <span class="text-warning">★★★☆☆</span>
+                                            <span class="badge bg-success">実務経験あり</span>
+                                        </span>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            </details>
+                        </div>
+
                         <!-- その他 -->
                         <div class="card mb-4 rounded-3 shadow-sm">
-                            <div class="card-header py-3">
-                                <h4 class="my-0 fw-normal">その他</h4>
-                            </div>
+                            <details>
+                            <summary class="card-header py-3">
+                                <h4 class="my-0 fw-normal d-inline">その他</h4>
+                            </summary>
                             <div class="card-body">
                                 <ul class="list-group">
 
@@ -558,20 +577,21 @@
                                     <li class="list-group-item d-flex justify-content-between">
                                        LangChain
                                         <span class="d-inline-flex align-items-center gap-2">
-                                            <span class="text-warning">★★☆☆☆</span>
+                                            <span class="text-warning">★☆☆☆☆</span>
                                             <span class="badge bg-secondary">実務経験なし</span>
                                         </span>
                                     </li>
 
                                 </ul>
                             </div>
+                            </details>
                         </div>
 
                     </div>
                 </div>
             </section>
 
-            <section class="license section" id="license" style="background: rgba(255, 255, 255, 0.9); padding: 60px 0; margin: 40px 0; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <section class="license section section-surface" id="license">
                 <h2 class="title">保有資格</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-xs-12">
@@ -585,15 +605,19 @@
                                 <ul class="list-group">
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         AWS 認定ソリューションアーキテクト - アソシエイト
-                                        <span class="badge bg-primary rounded-pill">2022年取得</span>
+                                        <span class="badge bg-secondary rounded-pill">2022年取得(失効済み)</span>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         AWS 認定デベロッパー - アソシエイト
-                                        <span class="badge bg-primary rounded-pill">2023年取得</span>
+                                        <span class="badge bg-secondary rounded-pill">2023年取得(失効済み)</span>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         AWS 認定SysOps アドミニストレーター - アソシエイト
                                         <span class="badge bg-primary rounded-pill">2023年取得</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        AWS 認定ソリューションアーキテクト - プロフェッショナル
+                                        <span class="badge bg-primary rounded-pill">2026年取得</span>
                                     </li>
                                 </ul>
                             </div>
@@ -639,7 +663,7 @@
             </section>
 
             <!-- contact -->
-            <section class="contact section" id="contact" style="background: rgba(255, 255, 255, 0.9); padding: 60px 0; margin: 40px 0; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <section class="contact section section-surface" id="contact">
                 <div class="container">
                     <h2 class="title">問い合わせ</h2>
                     <div class="row justify-content-center">

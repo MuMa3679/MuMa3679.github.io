@@ -1,14 +1,92 @@
+:root {
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-text: #1f2328;
+  --color-text-muted: #5c6570;
+  --color-accent: #2563eb;
+  --color-border: #e5e7eb;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+}
+
 body {
   font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
   font-size: 15px;
   letter-spacing: .05em;
-  color: #333;
+  color: var(--color-text);
+  background: var(--color-bg);
 }
 
 a {
   transition: opacity .3s;
   text-decoration: none;
-  color: #1ca9e3;
+  color: var(--color-accent);
+}
+
+/*--------------------------------
+ セクションカード / Bootstrapカードの共通スキン
+---------------------------------*/
+.section-surface {
+  background: var(--color-surface);
+  padding: 60px 0;
+  margin: 40px 0;
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  border: 1px solid var(--color-border);
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  box-shadow: none !important;
+  border-radius: var(--radius-md);
+}
+
+.card-header {
+  background: transparent;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.list-group-item {
+  border-color: var(--color-border);
+}
+
+.text-warning {
+  color: var(--color-accent) !important;
+}
+
+.badge.bg-success {
+  background-color: var(--color-accent) !important;
+  color: #fff;
+}
+
+.badge.bg-primary {
+  background-color: var(--color-accent) !important;
+}
+
+.badge.bg-secondary {
+  background-color: transparent !important;
+  color: var(--color-text-muted) !important;
+  border: 1px solid var(--color-border);
+}
+
+.stack details > summary.card-header {
+  cursor: pointer;
+  list-style: none;
+}
+
+.stack details > summary.card-header::-webkit-details-marker {
+  display: none;
+}
+
+.stack details > summary.card-header::after {
+  content: "+";
+  float: right;
+  font-weight: bold;
+  color: var(--color-text-muted);
+}
+
+.stack details[open] > summary.card-header::after {
+  content: "−";
 }
 
 img {

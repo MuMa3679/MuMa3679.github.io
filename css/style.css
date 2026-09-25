@@ -219,7 +219,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 85vh;
+  min-height: 85vh;
+  padding: 60px 0;
   text-align: center;
 }
 
@@ -247,7 +248,139 @@ img {
   line-height: 1.8;
 }
 
+.mv {
+  position: relative;
+  color: var(--color-text);
+  background: url(../img/background.jpg) center center / cover no-repeat;
+}
 
+.mv-role {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: .05em;
+}
+
+.mv-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.mv-badges .badge {
+  font-size: 13px;
+  padding: 8px 14px;
+}
+
+.mv-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/*--------------------------------
+ Highlights
+---------------------------------*/
+.highlight-card {
+  transition: transform .2s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+}
+
+.highlight-icon {
+  display: block;
+  font-size: 36px;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+/*--------------------------------
+ 沿革タイムライン
+---------------------------------*/
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 120px;
+  margin-bottom: 30px;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  left: 90px;
+  top: 0;
+  bottom: -30px;
+  width: 2px;
+  background: var(--color-accent);
+}
+
+.timeline-item:last-child:before {
+  bottom: -100px;
+  background: linear-gradient(to bottom, var(--color-accent) 0%, var(--color-accent) 80%, transparent 100%);
+}
+
+.timeline-date {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  padding: 5px 10px;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-weight: bold;
+  text-align: center;
+}
+
+.timeline-content {
+  background: var(--color-bg);
+  padding: 15px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.timeline-content h5 {
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/*--------------------------------
+ 保有資格バッジグリッド
+---------------------------------*/
+.license-badge {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.license-name {
+  margin: 0;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.license-badge .badge {
+  align-self: flex-start;
+}
 
 /*--------------------------------
  Skill
@@ -318,6 +451,61 @@ img {
 
 .profile-body p:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.profile-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.profile-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-stat-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-accent);
+}
+
+.profile-stat-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/*--------------------------------
+ プロジェクト経験
+---------------------------------*/
+.project-card {
+  height: 100%;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.project-title {
+  margin-bottom: 4px;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.project-desc {
+  margin-bottom: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
 /*--------------------------------
@@ -470,6 +658,12 @@ img {
     margin-right: 15px;
   }
 
+  .gnav-list {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+  }
+
   .gnav-item:not(:last-child) {
     margin-right: 10px;
   }
@@ -484,7 +678,8 @@ img {
 
   /*  メインビジュアル */
   .mv {
-    height: 75vh;
+    min-height: 75vh;
+    padding: 40px 0;
   }
 
   .mv-container {
@@ -504,6 +699,39 @@ img {
     line-height: 1.7;
   }
 
+  .mv-role {
+    font-size: 15px;
+  }
+
+  .mv-badges .badge {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .mv-cta .btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  /* Highlights */
+  .highlight-icon {
+    font-size: 30px;
+  }
+
+  /* 沿革タイムライン */
+  .timeline-item {
+    padding-left: 80px;
+  }
+
+  .timeline-item:before {
+    left: 60px;
+  }
+
+  .timeline-date {
+    width: 60px;
+    font-size: 11px;
+    padding: 4px 6px;
+  }
 
   /* Skill */
   .skill-list {
